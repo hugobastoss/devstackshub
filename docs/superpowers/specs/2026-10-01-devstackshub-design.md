@@ -286,14 +286,15 @@ stargazers).
      dados, IA, deploy, e-mail, cache e muito mais, com links, preços e
      alternativas."
    - Botões: "Explorar o catálogo" e "Ver roadmaps".
-2. **Categorias:** grade com as 22 categorias (ícone, nome, descrição de uma
-   linha e "N ferramentas"). Cada card é um botão que aplica o filtro no
-   catálogo e rola até ele; a categoria ativa fica com `aria-pressed="true"`.
+2. **Categorias:** a grade de categorias foi removida depois da primeira
+   versão (pedido do dono em 2026-10-01). Os chips do catálogo mostram o total
+   de stacks de cada categoria.
 3. **Catálogo** (`#catalogo`):
    - Título e a contagem "N de 201 stacks" (`aria-live`).
    - Busca sem acento em nome, empresa, descrição, tags, recursos e nome da
      categoria.
-   - Pílulas de categoria ("Todas" + 22).
+   - Pílulas de categoria ("Todas" + 22), cada uma com o total de stacks
+     ("Frontend 16"; leitor de tela: "Frontend (16 stacks)").
    - Toggles: "Plano gratuito", "Open source" e "Self-hosted".
    - Ordenação (`<select>`): Popularidade (padrão), Nome (A–Z), Estrelas no
      GitHub (sem estrelas vão para o fim).

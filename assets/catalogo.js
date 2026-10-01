@@ -1,7 +1,7 @@
-// Home page: category grid and the catalog with search, filters, sorting,
+// Home page: the catalog with search, category chips (with counts), filters,
 // favourites and paging. The filter state lives in the URL so links can be shared.
 (() => {
-  const { $, el, icone, normalizar, carregarStacks, erroDeCarga, favoritos, card } = window.DSH;
+  const { $, el, normalizar, carregarStacks, erroDeCarga, favoritos, card } = window.DSH;
   const POR_PAGINA = 30;
   const ORDENS = ['popularidade', 'nome', 'estrelas'];
   const TIPOS = { gratuito: 'plano_gratuito', aberto: 'codigo_aberto', self: 'self_hosted' };
@@ -48,24 +48,18 @@
       .sort(ORDENAR[estado.ordem]);
   }
 
+  // Each chip shows how many stacks the category has in the whole catalog.
   function renderCategorias() {
-    const totais = {};
+    const totais = { '': dados.itens.length };
     dados.itens.forEach((s) => { totais[s.categoria] = (totais[s.categoria] ?? 0) + 1; });
-    $('categorias').replaceChildren(...Object.entries(dados.categorias).map(([id, cat]) => {
-      const botao = el('button', 'categoria-card');
-      botao.type = 'button';
-      botao.dataset.categoria = id;
-      const caixaIcone = el('span', 'categoria-icone');
-      caixaIcone.append(icone(cat.icone));
-      const total = totais[id] ?? 0;
-      botao.append(caixaIcone, el('span', 'categoria-nome', cat.nome), el('span', 'categoria-desc', cat.descricao),
-        el('span', 'categoria-total', `${total} ${total === 1 ? 'ferramenta' : 'ferramentas'}`));
-      return botao;
-    }));
     $('filtro-categoria').replaceChildren(...['', ...Object.keys(dados.categorias)].map((id) => {
-      const botao = el('button', null, id ? dados.categorias[id].nome : 'Todas');
+      const nome = id ? dados.categorias[id].nome : 'Todas';
+      const total = totais[id] ?? 0;
+      const botao = el('button', null, nome);
       botao.type = 'button';
       botao.dataset.categoria = id;
+      botao.setAttribute('aria-label', `${nome} (${total} ${total === 1 ? 'stack' : 'stacks'})`);
+      botao.append(el('span', 'qtd', String(total)));
       return botao;
     }));
   }
@@ -89,7 +83,7 @@
     $('total-favoritos').textContent = `(${totalFavoritos()})`;
     $('so-favoritos').setAttribute('aria-pressed', String(estado.soFavoritos));
     $('ordem').value = estado.ordem;
-    document.querySelectorAll('[data-categoria]').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.categoria === estado.categoria)));
+    document.querySelectorAll('#filtro-categoria button').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.categoria === estado.categoria)));
     document.querySelectorAll('#filtro-tipo button').forEach((b) => b.setAttribute('aria-pressed', String(estado[b.dataset.filtro])));
     atualizarMais();
     salvarUrl();
@@ -125,13 +119,6 @@
     renderCategorias();
     render();
 
-    $('categorias').addEventListener('click', (e) => {
-      const botao = e.target.closest('button');
-      if (!botao) return;
-      estado.categoria = botao.dataset.categoria;
-      render();
-      $('catalogo').scrollIntoView();
-    });
     $('filtro-categoria').addEventListener('click', (e) => {
       const botao = e.target.closest('button');
       if (!botao) return;
