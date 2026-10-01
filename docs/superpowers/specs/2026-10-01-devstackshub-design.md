@@ -280,7 +280,7 @@ stargazers).
 
 ### `index.html`
 
-1. **Hero:** grade de fundo e selo "Curadoria aberta".
+1. **Hero:** grade de fundo e sem selo acima do título (o "Curadoria aberta" foi removido a pedido do dono).
    - Título: "Encontre a stack certa para o seu próximo **projeto.**"
    - Texto de apoio: "Mais de 200 serviços de frontend, backend, banco de
      dados, IA, deploy, e-mail, cache e muito mais, com links, preços e
