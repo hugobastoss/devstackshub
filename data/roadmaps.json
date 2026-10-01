@@ -1,0 +1,457 @@
+{
+  "roadmaps": [
+    {
+      "id": "criar-blog-cms",
+      "titulo": "Criar Blog / CMS",
+      "descricao": "Stack para blog e CMS com CMS headless, MDX e busca integrada.",
+      "icone": "file-text",
+      "categoria": "content",
+      "etapas": [
+        {
+          "categoria": "Frontend",
+          "ferramenta": "Next.js",
+          "descricao": "App Router com MDX para conteúdo",
+          "stack": "next-js"
+        },
+        {
+          "categoria": "CMS",
+          "ferramenta": "Contentful",
+          "descricao": "CMS headless para gestão de conteúdo"
+        },
+        {
+          "categoria": "Search",
+          "ferramenta": "Algolia",
+          "descricao": "Busca full-text no conteúdo",
+          "stack": "algolia"
+        },
+        {
+          "categoria": "Email",
+          "ferramenta": "Resend",
+          "descricao": "Newsletter e notificações",
+          "stack": "resend"
+        },
+        {
+          "categoria": "Analytics",
+          "ferramenta": "PostHog",
+          "descricao": "Métricas de leitura e engajamento",
+          "stack": "posthog"
+        },
+        {
+          "categoria": "Deploy",
+          "ferramenta": "Vercel",
+          "descricao": "ISR para conteúdo atualizado",
+          "stack": "vercel"
+        }
+      ]
+    },
+    {
+      "id": "criar-mobile-app",
+      "titulo": "Criar Mobile App",
+      "descricao": "Stack para app mobile com React Native, Expo e backend serverless.",
+      "icone": "smartphone",
+      "categoria": "mobile",
+      "etapas": [
+        {
+          "categoria": "Mobile",
+          "ferramenta": "React Native + Expo",
+          "descricao": "Cross-platform iOS e Android"
+        },
+        {
+          "categoria": "Backend",
+          "ferramenta": "Supabase",
+          "descricao": "PostgreSQL e Auth gerenciados",
+          "stack": "supabase"
+        },
+        {
+          "categoria": "Auth",
+          "ferramenta": "Clerk",
+          "descricao": "Autenticação com OTP e social",
+          "stack": "clerk"
+        },
+        {
+          "categoria": "Notifications",
+          "ferramenta": "OneSignal",
+          "descricao": "Push notifications multiplataforma",
+          "stack": "onesignal"
+        },
+        {
+          "categoria": "Analytics",
+          "ferramenta": "PostHog",
+          "descricao": "Event analytics de produto",
+          "stack": "posthog"
+        },
+        {
+          "categoria": "Monitoring",
+          "ferramenta": "Sentry",
+          "descricao": "Error tracking em produção",
+          "stack": "sentry"
+        }
+      ]
+    },
+    {
+      "id": "criar-realtime-chat",
+      "titulo": "Criar Realtime Chat",
+      "descricao": "Stack para app de chat em tempo real com presença e histórico.",
+      "icone": "message-square",
+      "categoria": "realtime",
+      "etapas": [
+        {
+          "categoria": "Frontend",
+          "ferramenta": "Next.js",
+          "descricao": "Interface de chat com streaming",
+          "stack": "next-js"
+        },
+        {
+          "categoria": "Backend",
+          "ferramenta": "Supabase",
+          "descricao": "Realtime subscriptions e PostgreSQL",
+          "stack": "supabase"
+        },
+        {
+          "categoria": "Auth",
+          "ferramenta": "Clerk",
+          "descricao": "Usuários e sessões",
+          "stack": "clerk"
+        },
+        {
+          "categoria": "Cache",
+          "ferramenta": "Upstash",
+          "descricao": "Presença e status online",
+          "stack": "upstash"
+        },
+        {
+          "categoria": "Storage",
+          "ferramenta": "Cloudinary",
+          "descricao": "Upload de imagens e mídia",
+          "stack": "cloudinary"
+        },
+        {
+          "categoria": "Monitoring",
+          "ferramenta": "Sentry",
+          "descricao": "Error tracking em tempo real",
+          "stack": "sentry"
+        }
+      ]
+    },
+    {
+      "id": "criar-marketplace",
+      "titulo": "Criar Marketplace",
+      "descricao": "Stack para marketplace com pagamentos split, busca e reviews.",
+      "icone": "share-2",
+      "categoria": "marketplace",
+      "etapas": [
+        {
+          "categoria": "Frontend",
+          "ferramenta": "Next.js",
+          "descricao": "SSR para SEO de listings",
+          "stack": "next-js"
+        },
+        {
+          "categoria": "Backend",
+          "ferramenta": "Supabase",
+          "descricao": "PostgreSQL com RLS por vendedor",
+          "stack": "supabase"
+        },
+        {
+          "categoria": "Payments",
+          "ferramenta": "Stripe Connect",
+          "descricao": "Pagamentos split e onboarding de vendedores"
+        },
+        {
+          "categoria": "Search",
+          "ferramenta": "Algolia",
+          "descricao": "Busca facetada de produtos",
+          "stack": "algolia"
+        },
+        {
+          "categoria": "Email",
+          "ferramenta": "Resend",
+          "descricao": "Notificações de pedido e transações",
+          "stack": "resend"
+        },
+        {
+          "categoria": "Analytics",
+          "ferramenta": "PostHog",
+          "descricao": "Funil de conversão e métricas",
+          "stack": "posthog"
+        }
+      ]
+    },
+    {
+      "id": "criar-landing-page",
+      "titulo": "Criar Landing Page",
+      "descricao": "Stack focada em performance e SEO para páginas de conversão.",
+      "icone": "layout",
+      "categoria": "marketing",
+      "etapas": [
+        {
+          "categoria": "Frontend",
+          "ferramenta": "Next.js",
+          "descricao": "SSG para máximo desempenho e SEO",
+          "stack": "next-js"
+        },
+        {
+          "categoria": "Styling",
+          "ferramenta": "Tailwind CSS",
+          "descricao": "Estilização utility-first",
+          "stack": "tailwind-css"
+        },
+        {
+          "categoria": "Components",
+          "ferramenta": "shadcn/ui",
+          "descricao": "Componentes premium prontos",
+          "stack": "shadcn-ui"
+        },
+        {
+          "categoria": "Forms",
+          "ferramenta": "Resend",
+          "descricao": "Captura de leads via email",
+          "stack": "resend"
+        },
+        {
+          "categoria": "Deploy",
+          "ferramenta": "Vercel",
+          "descricao": "Edge network global",
+          "stack": "vercel"
+        },
+        {
+          "categoria": "Analytics",
+          "ferramenta": "PostHog",
+          "descricao": "Tracking de conversões",
+          "stack": "posthog"
+        }
+      ]
+    },
+    {
+      "id": "criar-dashboard",
+      "titulo": "Criar Dashboard",
+      "descricao": "Stack para painéis administrativos com gráficos e dados em tempo real.",
+      "icone": "bar-chart",
+      "categoria": "dashboard",
+      "etapas": [
+        {
+          "categoria": "Frontend",
+          "ferramenta": "Next.js",
+          "descricao": "App Router com layouts aninhados",
+          "stack": "next-js"
+        },
+        {
+          "categoria": "UI",
+          "ferramenta": "shadcn/ui",
+          "descricao": "Componentes de tabela, gráfico e form",
+          "stack": "shadcn-ui"
+        },
+        {
+          "categoria": "Backend",
+          "ferramenta": "Supabase",
+          "descricao": "PostgreSQL com RLS",
+          "stack": "supabase"
+        },
+        {
+          "categoria": "Auth",
+          "ferramenta": "Clerk",
+          "descricao": "Organizações e roles",
+          "stack": "clerk"
+        },
+        {
+          "categoria": "Cache",
+          "ferramenta": "Upstash",
+          "descricao": "Cache de queries pesadas",
+          "stack": "upstash"
+        },
+        {
+          "categoria": "Monitoring",
+          "ferramenta": "Sentry",
+          "descricao": "Error tracking",
+          "stack": "sentry"
+        }
+      ]
+    },
+    {
+      "id": "criar-ecommerce",
+      "titulo": "Criar Ecommerce",
+      "descricao": "Stack completa para loja online com pagamentos e gestão de produtos.",
+      "icone": "shopping-cart",
+      "categoria": "ecommerce",
+      "etapas": [
+        {
+          "categoria": "Frontend",
+          "ferramenta": "Next.js",
+          "descricao": "SSR para SEO e performance",
+          "stack": "next-js"
+        },
+        {
+          "categoria": "Backend",
+          "ferramenta": "Supabase",
+          "descricao": "Catálogo de produtos e pedidos",
+          "stack": "supabase"
+        },
+        {
+          "categoria": "Payments",
+          "ferramenta": "Stripe",
+          "descricao": "Checkout e webhooks",
+          "stack": "stripe"
+        },
+        {
+          "categoria": "Search",
+          "ferramenta": "Algolia",
+          "descricao": "Busca instantânea de produtos",
+          "stack": "algolia"
+        },
+        {
+          "categoria": "Email",
+          "ferramenta": "Resend",
+          "descricao": "Confirmações de pedido",
+          "stack": "resend"
+        },
+        {
+          "categoria": "Deploy",
+          "ferramenta": "Vercel",
+          "descricao": "Edge network global",
+          "stack": "vercel"
+        }
+      ]
+    },
+    {
+      "id": "criar-api",
+      "titulo": "Criar API",
+      "descricao": "Arquitetura para uma API REST/GraphQL escalável e documentada.",
+      "icone": "code",
+      "categoria": "backend",
+      "etapas": [
+        {
+          "categoria": "Frontend",
+          "ferramenta": "Next.js",
+          "descricao": "API Routes com Edge Runtime",
+          "stack": "next-js"
+        },
+        {
+          "categoria": "Database",
+          "ferramenta": "Neon",
+          "descricao": "PostgreSQL serverless com branching",
+          "stack": "neon"
+        },
+        {
+          "categoria": "ORM",
+          "ferramenta": "Prisma",
+          "descricao": "Type-safe ORM com migrations",
+          "stack": "prisma"
+        },
+        {
+          "categoria": "Cache",
+          "ferramenta": "Upstash",
+          "descricao": "Cache e rate limiting",
+          "stack": "upstash"
+        },
+        {
+          "categoria": "Auth",
+          "ferramenta": "Clerk",
+          "descricao": "API keys e JWT tokens",
+          "stack": "clerk"
+        },
+        {
+          "categoria": "Monitoring",
+          "ferramenta": "Sentry",
+          "descricao": "Error tracking e performance",
+          "stack": "sentry"
+        }
+      ]
+    },
+    {
+      "id": "criar-ia-app",
+      "titulo": "Criar IA App",
+      "descricao": "Stack para aplicações com IA, RAG e chatbots.",
+      "icone": "brain",
+      "categoria": "ai",
+      "etapas": [
+        {
+          "categoria": "Frontend",
+          "ferramenta": "Next.js",
+          "descricao": "Streaming de respostas com AI SDK",
+          "stack": "next-js"
+        },
+        {
+          "categoria": "AI",
+          "ferramenta": "OpenAI",
+          "descricao": "GPT-4 e embeddings",
+          "stack": "openai"
+        },
+        {
+          "categoria": "Backend",
+          "ferramenta": "Supabase",
+          "descricao": "Vector store com pgvector",
+          "stack": "supabase"
+        },
+        {
+          "categoria": "Cache",
+          "ferramenta": "Upstash",
+          "descricao": "Cache de respostas e rate limiting",
+          "stack": "upstash"
+        },
+        {
+          "categoria": "Auth",
+          "ferramenta": "Clerk",
+          "descricao": "Autenticação de usuários",
+          "stack": "clerk"
+        },
+        {
+          "categoria": "Monitoring",
+          "ferramenta": "Sentry",
+          "descricao": "Error tracking",
+          "stack": "sentry"
+        }
+      ]
+    },
+    {
+      "id": "criar-saas",
+      "titulo": "Criar SaaS",
+      "descricao": "Stack completa para construir um produto SaaS do zero com auth, pagamentos e analytics.",
+      "icone": "rocket",
+      "categoria": "saas",
+      "etapas": [
+        {
+          "categoria": "Frontend",
+          "ferramenta": "Next.js",
+          "descricao": "Framework React full-stack com SSR e App Router",
+          "stack": "next-js"
+        },
+        {
+          "categoria": "Backend",
+          "ferramenta": "Supabase",
+          "descricao": "PostgreSQL, Auth e Realtime gerenciados",
+          "stack": "supabase"
+        },
+        {
+          "categoria": "Email",
+          "ferramenta": "Resend",
+          "descricao": "Email transacional com React Email",
+          "stack": "resend"
+        },
+        {
+          "categoria": "Cache",
+          "ferramenta": "Upstash",
+          "descricao": "Redis serverless para cache e rate limiting",
+          "stack": "upstash"
+        },
+        {
+          "categoria": "Deploy",
+          "ferramenta": "Vercel",
+          "descricao": "Deploy automático com preview environments",
+          "stack": "vercel"
+        },
+        {
+          "categoria": "Analytics",
+          "ferramenta": "PostHog",
+          "descricao": "Product analytics e feature flags",
+          "stack": "posthog"
+        },
+        {
+          "categoria": "Logs",
+          "ferramenta": "Better Stack",
+          "descricao": "Monitoramento e status page",
+          "stack": "better-stack"
+        }
+      ]
+    }
+  ]
+}

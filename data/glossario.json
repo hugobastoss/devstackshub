@@ -1,0 +1,565 @@
+{
+  "categorias": {
+    "frontend": "Frontend",
+    "backend": "Backend & API",
+    "infra": "Infra & DevOps",
+    "dados": "Dados",
+    "seguranca": "Segurança",
+    "geral": "Conceitos gerais"
+  },
+  "termos": [
+    {
+      "termo": "SSR",
+      "expansao": "Server-Side Rendering",
+      "categoria": "frontend",
+      "descricao": "Renderização no servidor. O HTML é gerado no backend a cada requisição, pronto para o navegador exibir — boa para SEO e conteúdo dinâmico.",
+      "relacionados": ["SSG", "ISR", "SPA"]
+    },
+    {
+      "termo": "SSG",
+      "expansao": "Static Site Generation",
+      "categoria": "frontend",
+      "descricao": "Geração de páginas estáticas no build. O HTML é criado uma vez e reutilizado — máximo de performance e cache em CDN.",
+      "relacionados": ["SSR", "ISR", "CDN"]
+    },
+    {
+      "termo": "ISR",
+      "expansao": "Incremental Static Regeneration",
+      "categoria": "frontend",
+      "descricao": "Revalidação estática incremental: páginas estáticas que se atualizam em segundo plano sem rebuild completo, combinando performance de SSG com frescor de SSR.",
+      "relacionados": ["SSG", "SSR"]
+    },
+    {
+      "termo": "SPA",
+      "expansao": "Single Page Application",
+      "categoria": "frontend",
+      "descricao": "Aplicação de página única que carrega um HTML e navega via JavaScript, atualizando a tela sem recarregar a página.",
+      "relacionados": ["SSR", "PWA"]
+    },
+    {
+      "termo": "CSS",
+      "expansao": "Cascading Style Sheets",
+      "categoria": "frontend",
+      "descricao": "Linguagem de estilos que define cores, tipografia, layout e responsividade de uma página web.",
+      "relacionados": ["UI", "UX"]
+    },
+    {
+      "termo": "UI",
+      "expansao": "User Interface",
+      "categoria": "frontend",
+      "descricao": "Interface do usuário: os elementos visuais e interativos (botões, menus, layouts) com os quais a pessoa interage.",
+      "relacionados": ["UX", "CSS"]
+    },
+    {
+      "termo": "UX",
+      "expansao": "User Experience",
+      "categoria": "frontend",
+      "descricao": "Experiência do usuário: a sensação e eficiência ao usar o produto — fluxo, clareza, acessibilidade e usabilidade.",
+      "relacionados": ["UI"]
+    },
+    {
+      "termo": "PWA",
+      "expansao": "Progressive Web App",
+      "categoria": "frontend",
+      "descricao": "App web que se comporta como nativo: instalável, offline e com notificações push, usando service workers.",
+      "relacionados": ["SPA", "Notifications"]
+    },
+    {
+      "termo": "API",
+      "expansao": "Application Programming Interface",
+      "categoria": "backend",
+      "descricao": "Interface de programação que permite que sistemas se comuniquem — você chama endpoints para ler ou alterar dados de um serviço.",
+      "relacionados": ["REST", "GraphQL", "SDK"]
+    },
+    {
+      "termo": "REST",
+      "expansao": "Representational State Transfer",
+      "categoria": "backend",
+      "descricao": "Estilo de API sobre HTTP usando verbos (GET, POST, PUT, DELETE) e recursos identificados por URLs.",
+      "relacionados": ["API", "GraphQL"]
+    },
+    {
+      "termo": "GraphQL",
+      "expansao": "GraphQL Query Language",
+      "categoria": "backend",
+      "descricao": "Linguagem de consulta para APIs onde o cliente pede exatamente os campos que precisa, evitando under/over-fetching.",
+      "relacionados": ["API", "REST"]
+    },
+    {
+      "termo": "ORM",
+      "expansao": "Object-Relational Mapping",
+      "categoria": "backend",
+      "descricao": "Mapeamento objeto-relacional: biblioteca que traduz objetos do código em registros do banco, sem escrever SQL manual.",
+      "relacionados": ["SQL", "CRUD"]
+    },
+    {
+      "termo": "CRUD",
+      "expansao": "Create, Read, Update, Delete",
+      "categoria": "backend",
+      "descricao": "As quatro operações básicas de dados — criar, ler, atualizar e excluir registros.",
+      "relacionados": ["ORM", "API"]
+    },
+    {
+      "termo": "SDK",
+      "expansao": "Software Development Kit",
+      "categoria": "backend",
+      "descricao": "Conjunto de bibliotecas e ferramentas pronto para integrar um serviço ao seu código sem partir do zero.",
+      "relacionados": ["API", "CLI"]
+    },
+    {
+      "termo": "CLI",
+      "expansao": "Command-Line Interface",
+      "categoria": "backend",
+      "descricao": "Interface de linha de comando — operar ferramentas pelo terminal em vez de uma interface gráfica.",
+      "relacionados": ["GUI", "SDK"]
+    },
+    {
+      "termo": "CI/CD",
+      "expansao": "Continuous Integration / Continuous Delivery",
+      "categoria": "infra",
+      "descricao": "Integração e entrega contínuas: a cada mudança de código, testes e builds rodam automaticamente e podem ser publicados sem passos manuais.",
+      "relacionados": ["Deploy", "DevOps"]
+    },
+    {
+      "termo": "PaaS",
+      "expansao": "Platform as a Service",
+      "categoria": "infra",
+      "descricao": "Plataforma como serviço: você sobe o código e o provedor cuida de servidores, rede e escalonamento (ex.: Heroku, Render).",
+      "relacionados": ["IaaS", "SaaS", "BaaS"]
+    },
+    {
+      "termo": "IaaS",
+      "expansao": "Infrastructure as a Service",
+      "categoria": "infra",
+      "descricao": "Infraestrutura como serviço: você aluga VMs e redes e gerencia o sistema operacional e o app (ex.: EC2, DigitalOcean).",
+      "relacionados": ["PaaS", "VM"]
+    },
+    {
+      "termo": "SaaS",
+      "expansao": "Software as a Service",
+      "categoria": "infra",
+      "descricao": "Software como serviço: produto pronto, acessível pelo navegador, sem instalar nada (ex.: Gmail, Notion).",
+      "relacionados": ["PaaS", "BaaS"]
+    },
+    {
+      "termo": "BaaS",
+      "expansao": "Backend as a Service",
+      "categoria": "infra",
+      "descricao": "Backend como serviço: auth, banco, storage e APIs prontos num só lugar (ex.: Firebase, Supabase).",
+      "relacionados": ["PaaS", "API"]
+    },
+    {
+      "termo": "CDN",
+      "expansao": "Content Delivery Network",
+      "categoria": "infra",
+      "descricao": "Rede de entrega de conteúdo: servidores espalhados pelo mundo cacheiam assets estáticos para reduzir latência.",
+      "relacionados": ["SSG", "Cache"]
+    },
+    {
+      "termo": "IaC",
+      "expansao": "Infrastructure as Code",
+      "categoria": "infra",
+      "descricao": "Infraestrutura como código: provisionar servidores e redes por arquivos versionáveis (ex.: Terraform, Pulumi).",
+      "relacionados": ["CI/CD", "DevOps"]
+    },
+    {
+      "termo": "K8s",
+      "expansao": "Kubernetes",
+      "categoria": "infra",
+      "descricao": "Orquestrador de contêineres: gerencia escalonamento, deploy e disponibilidade de aplicações em clusters.",
+      "relacionados": ["Docker", "DevOps"]
+    },
+    {
+      "termo": "VM",
+      "expansao": "Virtual Machine",
+      "categoria": "infra",
+      "descricao": "Máquina virtual: um computador emulado que roda seu próprio sistema operacional sobre um host físico.",
+      "relacionados": ["VPS", "IaaS"]
+    },
+    {
+      "termo": "VPS",
+      "expansao": "Virtual Private Server",
+      "categoria": "infra",
+      "descricao": "Servidor virtual privado: uma VM com recursos dedicados e acesso root, geralmente mais barata que cloud gerenciado.",
+      "relacionados": ["VM", "IaaS"]
+    },
+    {
+      "termo": "APM",
+      "expansao": "Application Performance Monitoring",
+      "categoria": "infra",
+      "descricao": "Monitoramento de performance da aplicação: rastreia latência, erros e gargalos em tempo real (ex.: Sentry, Datadog).",
+      "relacionados": ["Monitoring", "RUM"]
+    },
+    {
+      "termo": "RUM",
+      "expansao": "Real User Monitoring",
+      "categoria": "infra",
+      "descricao": "Monitoramento de usuários reais: mede performance percebida pelos visitantes no próprio navegador.",
+      "relacionados": ["APM", "Analytics"]
+    },
+    {
+      "termo": "SQL",
+      "expansao": "Structured Query Language",
+      "categoria": "dados",
+      "descricao": "Linguagem de consulta estruturada usada em bancos relacionais (PostgreSQL, MySQL).",
+      "relacionados": ["NoSQL", "ORM", "ACID"]
+    },
+    {
+      "termo": "NoSQL",
+      "expansao": "Not Only SQL",
+      "categoria": "dados",
+      "descricao": "Bancos não relacionais (documento, chave-valor, grafos) otimizados para escala e esquemas flexíveis.",
+      "relacionados": ["SQL", "ACID"]
+    },
+    {
+      "termo": "ACID",
+      "expansao": "Atomicity, Consistency, Isolation, Durability",
+      "categoria": "dados",
+      "descricao": "Garantias de transações em bancos relacionais: operação atômica, consistente, isolada e durável.",
+      "relacionados": ["SQL", "CRUD"]
+    },
+    {
+      "termo": "Cache",
+      "expansao": "Cache",
+      "categoria": "dados",
+      "descricao": "Camada de memória rápida que guarda dados frequentemente acessados para reduzir idas ao banco (ex.: Redis).",
+      "relacionados": ["CDN", "Redis"]
+    },
+    {
+      "termo": "JWT",
+      "expansao": "JSON Web Token",
+      "categoria": "seguranca",
+      "descricao": "Token assinado em JSON usado para autenticação stateless — o servidor valida a assinatura sem guardar sessão.",
+      "relacionados": ["OAuth", "Auth"]
+    },
+    {
+      "termo": "OAuth",
+      "expansao": "Open Authorization",
+      "categoria": "seguranca",
+      "descricao": "Padrão de autorização que permite login com terceiros (Google, GitHub) sem compartilhar a senha.",
+      "relacionados": ["JWT", "Auth"]
+    },
+    {
+      "termo": "RBAC",
+      "expansao": "Role-Based Access Control",
+      "categoria": "seguranca",
+      "descricao": "Controle de acesso por papéis: permissões atribuídas a roles (admin, user) e não a cada pessoa.",
+      "relacionados": ["RLS", "Auth"]
+    },
+    {
+      "termo": "RLS",
+      "expansao": "Row-Level Security",
+      "categoria": "seguranca",
+      "descricao": "Segurança a nível de linha: regras no banco que limitam quais registros cada usuário pode ler ou escrever.",
+      "relacionados": ["RBAC", "Auth"]
+    },
+    {
+      "termo": "WAF",
+      "expansao": "Web Application Firewall",
+      "categoria": "seguranca",
+      "descricao": "Firewall de aplicação web que bloqueia ataques (SQLi, XSS, bots) antes que cheguem ao seu app.",
+      "relacionados": ["CDN", "CAPTCHA"]
+    },
+    {
+      "termo": "SSL/TLS",
+      "expansao": "Secure Sockets Layer / Transport Layer Security",
+      "categoria": "seguranca",
+      "descricao": "Protocolos que criptografam a comunicação entre navegador e servidor — o cadeado HTTPS.",
+      "relacionados": ["HTTP", "DNS"]
+    },
+    {
+      "termo": "SEO",
+      "expansao": "Search Engine Optimization",
+      "categoria": "geral",
+      "descricao": "Otimização para mecanismos de busca: melhorar estrutura, conteúdo e metadados para aparecer no Google.",
+      "relacionados": ["SSR", "SSG", "OG"]
+    },
+    {
+      "termo": "OG",
+      "expansao": "Open Graph",
+      "categoria": "geral",
+      "descricao": "Metadados que controlam como seu link aparece ao ser compartilhado (título, imagem, descrição).",
+      "relacionados": ["SEO", "UI"]
+    },
+    {
+      "termo": "DX",
+      "expansao": "Developer Experience",
+      "categoria": "geral",
+      "descricao": "Experiência do desenvolvedor: quão agradável e produtivo é construir com uma ferramenta ou stack.",
+      "relacionados": ["UX", "CLI"]
+    },
+    {
+      "termo": "HTTP",
+      "expansao": "HyperText Transfer Protocol",
+      "categoria": "geral",
+      "descricao": "Protocolo base da web — como navegador e servidor trocam requisições e respostas.",
+      "relacionados": ["HTTPS", "REST", "API"]
+    },
+    {
+      "termo": "HTTPS",
+      "expansao": "HTTP Secure",
+      "categoria": "geral",
+      "descricao": "HTTP sobre TLS — a mesma comunicação, porém criptografada.",
+      "relacionados": ["HTTP", "SSL/TLS"]
+    },
+    {
+      "termo": "WebSocket",
+      "expansao": "WebSocket Protocol",
+      "categoria": "geral",
+      "descricao": "Protocolo de conexão persistente e bidirecional para dados em tempo real (chat, atualizações ao vivo).",
+      "relacionados": ["HTTP", "Notifications"]
+    },
+    {
+      "termo": "DevOps",
+      "expansao": "Development + Operations",
+      "categoria": "geral",
+      "descricao": "Cultura e práticas que unem desenvolvimento e operações para entregas mais rápidas e confiáveis (CI/CD, IaC, monitoramento).",
+      "relacionados": ["CI/CD", "IaC", "APM"]
+    },
+    {
+      "termo": "HTML",
+      "expansao": "HyperText Markup Language",
+      "categoria": "frontend",
+      "descricao": "Linguagem de marcação que estrutura o conteúdo de uma página (títulos, parágrafos, links, imagens).",
+      "relacionados": ["CSS", "DOM"]
+    },
+    {
+      "termo": "DOM",
+      "expansao": "Document Object Model",
+      "categoria": "frontend",
+      "descricao": "Representação em árvore da página que o JavaScript manipula para mudar conteúdo e estilo dinamicamente.",
+      "relacionados": ["HTML", "SSR"]
+    },
+    {
+      "termo": "A11y",
+      "expansao": "Accessibility (accessibility)",
+      "categoria": "frontend",
+      "descricao": "Acessibilidade: garantir que pessoas com deficiência consigam usar o app (leitores de tela, contraste, teclado).",
+      "relacionados": ["UI", "UX"]
+    },
+    {
+      "termo": "Hydration",
+      "expansao": "Hydration",
+      "categoria": "frontend",
+      "descricao": "Hidratação: depois do HTML renderizado no servidor, o JavaScript 'liga' os eventos na página no cliente.",
+      "relacionados": ["SSR", "SSG"]
+    },
+    {
+      "termo": "Lazy Loading",
+      "expansao": "Lazy Loading",
+      "categoria": "frontend",
+      "descricao": "Carregar componentes ou imagens só quando necessários (ex.: ao rolar a tela), reduzindo o peso inicial.",
+      "relacionados": ["SPA", "SEO"]
+    },
+    {
+      "termo": "gRPC",
+      "expansao": "gRPC Remote Procedure Calls",
+      "categoria": "backend",
+      "descricao": "Protocolo de RPC de alta performance sobre HTTP/2 com contratos binários (Protobuf) — comum entre serviços.",
+      "relacionados": ["API", "REST"]
+    },
+    {
+      "termo": "Webhook",
+      "expansao": "Webhook",
+      "categoria": "backend",
+      "descricao": "Notificação HTTP reversa: um serviço chama sua URL quando um evento acontece, em vez de você perguntar.",
+      "relacionados": ["API", "Notifications"]
+    },
+    {
+      "termo": "Middleware",
+      "expansao": "Middleware",
+      "categoria": "backend",
+      "descricao": "Camada intermediária que intercepta requisições (auth, logs, cache) antes de chegarem à lógica de negócio.",
+      "relacionados": ["API", "REST"]
+    },
+    {
+      "termo": "Serverless",
+      "expansao": "Serverless",
+      "categoria": "backend",
+      "descricao": "Executar código sem gerenciar servidores — você sobe funções e o provedor escala sob demanda (ex.: Vercel Functions).",
+      "relacionados": ["PaaS", "Lambda", "Edge"]
+    },
+    {
+      "termo": "Edge",
+      "expansao": "Edge Computing",
+      "categoria": "backend",
+      "descricao": "Executar código mais perto do usuário, em servidores de borda da CDN, para menor latência (ex.: Cloudflare Workers).",
+      "relacionados": ["CDN", "Serverless"]
+    },
+    {
+      "termo": "Docker",
+      "expansao": "Docker (Containers)",
+      "categoria": "infra",
+      "descricao": "Empacotar a app e suas dependências num contêiner que roda igual em qualquer máquina.",
+      "relacionados": ["K8s", "CI/CD"]
+    },
+    {
+      "termo": "Container",
+      "expansao": "Container",
+      "categoria": "infra",
+      "descricao": "Unidade isolada e portátil com a aplicação e suas libs — mais leve que uma VM.",
+      "relacionados": ["Docker", "K8s"]
+    },
+    {
+      "termo": "Lambda",
+      "expansao": "AWS Lambda",
+      "categoria": "infra",
+      "descricao": "Funções serverless da AWS executadas sob demanda, cobradas por tempo de execução.",
+      "relacionados": ["Serverless", "Edge"]
+    },
+    {
+      "termo": "Load Balancer",
+      "expansao": "Load Balancer",
+      "categoria": "infra",
+      "descricao": "Distribui o tráfego entre vários servidores para evitar sobrecarga e aumentar disponibilidade.",
+      "relacionados": ["Autoscaling", "CDN"]
+    },
+    {
+      "termo": "Autoscaling",
+      "expansao": "Autoscaling",
+      "categoria": "infra",
+      "descricao": "Adicionar ou remover servidores automaticamente conforme a demanda sobe ou cai.",
+      "relacionados": ["Load Balancer", "K8s"]
+    },
+    {
+      "termo": "Health Check",
+      "expansao": "Health Check",
+      "categoria": "infra",
+      "descricao": "Verificação periódica que indica se um serviço está saudável — usada por balancers e orquestradores.",
+      "relacionados": ["APM", "Monitoring"]
+    },
+    {
+      "termo": "Vector DB",
+      "expansao": "Vector Database",
+      "categoria": "dados",
+      "descricao": "Banco otimizado para buscar por similaridade entre vetores (embeddings) — base de IA, RAG e busca semântica.",
+      "relacionados": ["NoSQL", "Cache"]
+    },
+    {
+      "termo": "OLAP",
+      "expansao": "Online Analytical Processing",
+      "categoria": "dados",
+      "descricao": "Processamento analítico para consultas complexas e agregações em grandes volumes (ex.: BigQuery).",
+      "relacionados": ["SQL", "OLTP"]
+    },
+    {
+      "termo": "OLTP",
+      "expansao": "Online Transaction Processing",
+      "categoria": "dados",
+      "descricao": "Processamento de transações online — operações rápidas de leitura/escrita, típico de apps (ex.: PostgreSQL).",
+      "relacionados": ["SQL", "OLAP", "ACID"]
+    },
+    {
+      "termo": "Sharding",
+      "expansao": "Sharding",
+      "categoria": "dados",
+      "descricao": "Particionar dados em vários servidores (shards) para escalar horizontalmente grandes volumes.",
+      "relacionados": ["SQL", "NoSQL"]
+    },
+    {
+      "termo": "Migration",
+      "expansao": "Database Migration",
+      "categoria": "dados",
+      "descricao": "Versionar e aplicar mudanças de esquema do banco de forma controlada (ex.: via Prisma Migrate).",
+      "relacionados": ["ORM", "SQL"]
+    },
+    {
+      "termo": "MFA",
+      "expansao": "Multi-Factor Authentication",
+      "categoria": "seguranca",
+      "descricao": "Autenticação multifator: exige mais de uma prova de identidade (senha + código no app/SMS).",
+      "relacionados": ["2FA", "OAuth"]
+    },
+    {
+      "termo": "2FA",
+      "expansao": "Two-Factor Authentication",
+      "categoria": "seguranca",
+      "descricao": "Autenticação de dois fatores — um caso comum de MFA combinando senha e um segundo fator.",
+      "relacionados": ["MFA", "OAuth"]
+    },
+    {
+      "termo": "CORS",
+      "expansao": "Cross-Origin Resource Sharing",
+      "categoria": "seguranca",
+      "descricao": "Política do navegador que controla quais origens podem chamar sua API — evita requisições não autorizadas.",
+      "relacionados": ["API", "HTTP"]
+    },
+    {
+      "termo": "XSS",
+      "expansao": "Cross-Site Scripting",
+      "categoria": "seguranca",
+      "descricao": "Ataque que injeta scripts maliciosos na página — mitigado com escape e CSP.",
+      "relacionados": ["WAF", "CSP"]
+    },
+    {
+      "termo": "SQLi",
+      "expansao": "SQL Injection",
+      "categoria": "seguranca",
+      "descricao": "Ataque que injeta SQL em campos — evitado com queries parametrizadas e ORMs.",
+      "relacionados": ["WAF", "SQL", "ORM"]
+    },
+    {
+      "termo": "SSO",
+      "expansao": "Single Sign-On",
+      "categoria": "seguranca",
+      "descricao": "Login único: uma credencial abre vários apps da mesma organização (ex.: via SAML, OIDC).",
+      "relacionados": ["OAuth", "OIDC"]
+    },
+    {
+      "termo": "OIDC",
+      "expansao": "OpenID Connect",
+      "categoria": "seguranca",
+      "descricao": "Camada de identidade sobre OAuth 2.0 que padroniza login e troca de dados do usuário.",
+      "relacionados": ["OAuth", "JWT", "SSO"]
+    },
+    {
+      "termo": "JSON",
+      "expansao": "JavaScript Object Notation",
+      "categoria": "geral",
+      "descricao": "Formato de dados leve e legível, padrão de fato para troca de informações entre sistemas.",
+      "relacionados": ["API", "YAML"]
+    },
+    {
+      "termo": "YAML",
+      "expansao": "YAML Ain't Markup Language",
+      "categoria": "geral",
+      "descricao": "Formato de configuração legível por humanos, muito usado em CI/CD e IaC.",
+      "relacionados": ["JSON", "IaC"]
+    },
+    {
+      "termo": "Git",
+      "expansao": "Git (Version Control)",
+      "categoria": "geral",
+      "descricao": "Sistema de controle de versão distribuído que rastreia mudanças de código e viabiliza colaboração.",
+      "relacionados": ["Repo", "PR"]
+    },
+    {
+      "termo": "Repo",
+      "expansao": "Repository",
+      "categoria": "geral",
+      "descricao": "Repositório: onde o código e seu histórico ficam guardados (ex.: no GitHub, GitLab).",
+      "relacionados": ["Git", "PR"]
+    },
+    {
+      "termo": "PR",
+      "expansao": "Pull Request / Merge Request",
+      "categoria": "geral",
+      "descricao": "Pedido de revisão e integração de mudanças numa branch — dispara o pipeline de CI/CD.",
+      "relacionados": ["Git", "CI/CD"]
+    },
+    {
+      "termo": "SemVer",
+      "expansao": "Semantic Versioning",
+      "categoria": "geral",
+      "descricao": "Versionamento semântico (MAJOR.MINOR.PATCH) que sinaliza o tipo de mudança entre releases.",
+      "relacionados": ["Git", "Repo"]
+    },
+    {
+      "termo": "Open Source",
+      "expansao": "Open Source Software",
+      "categoria": "geral",
+      "descricao": "Software de código aberto, com licença que permite uso, estudo e modificação pela comunidade.",
+      "relacionados": ["License", "Git"]
+    }
+  ]
+}

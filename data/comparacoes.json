@@ -1,0 +1,316 @@
+{
+  "comparacoes": [
+    {
+      "id": "supabase-vs-firebase",
+      "stack_a": "supabase",
+      "stack_b": "firebase",
+      "vencedor": "a",
+      "linhas": [
+        {
+          "rotulo": "Banco de Dados",
+          "a": "PostgreSQL",
+          "b": "Firestore (NoSQL)",
+          "vence": "a"
+        },
+        {
+          "rotulo": "Auth",
+          "a": true,
+          "b": true
+        },
+        {
+          "rotulo": "Storage",
+          "a": true,
+          "b": true
+        },
+        {
+          "rotulo": "Realtime",
+          "a": true,
+          "b": true
+        },
+        {
+          "rotulo": "Edge Functions",
+          "a": true,
+          "b": "Cloud Functions"
+        },
+        {
+          "rotulo": "Vector Embeddings",
+          "a": true,
+          "b": false,
+          "vence": "a"
+        },
+        {
+          "rotulo": "Open Source",
+          "a": true,
+          "b": false,
+          "vence": "a"
+        },
+        {
+          "rotulo": "Self-hosted",
+          "a": true,
+          "b": false,
+          "vence": "a"
+        },
+        {
+          "rotulo": "Linguagem",
+          "a": "SQL",
+          "b": "NoSQL",
+          "vence": "a"
+        },
+        {
+          "rotulo": "Plano Gratuito",
+          "a": true,
+          "b": true
+        }
+      ]
+    },
+    {
+      "id": "neon-vs-supabase",
+      "stack_a": "neon",
+      "stack_b": "supabase",
+      "linhas": [
+        {
+          "rotulo": "Banco de Dados",
+          "a": "PostgreSQL Serverless",
+          "b": "PostgreSQL"
+        },
+        {
+          "rotulo": "Auth",
+          "a": false,
+          "b": true,
+          "vence": "b"
+        },
+        {
+          "rotulo": "Storage",
+          "a": false,
+          "b": true,
+          "vence": "b"
+        },
+        {
+          "rotulo": "Realtime",
+          "a": false,
+          "b": true,
+          "vence": "b"
+        },
+        {
+          "rotulo": "Edge Functions",
+          "a": false,
+          "b": true,
+          "vence": "b"
+        },
+        {
+          "rotulo": "Branching",
+          "a": true,
+          "b": false,
+          "vence": "a"
+        },
+        {
+          "rotulo": "Serverless",
+          "a": true,
+          "b": "Parcial",
+          "vence": "a"
+        },
+        {
+          "rotulo": "Open Source",
+          "a": true,
+          "b": true
+        },
+        {
+          "rotulo": "Plano Gratuito",
+          "a": true,
+          "b": true
+        }
+      ]
+    },
+    {
+      "id": "vercel-vs-netlify",
+      "stack_a": "vercel",
+      "stack_b": "netlify",
+      "vencedor": "a",
+      "linhas": [
+        {
+          "rotulo": "Next.js nativo",
+          "a": true,
+          "b": "Parcial",
+          "vence": "a"
+        },
+        {
+          "rotulo": "Edge Functions",
+          "a": true,
+          "b": true
+        },
+        {
+          "rotulo": "ISR",
+          "a": true,
+          "b": "Parcial",
+          "vence": "a"
+        },
+        {
+          "rotulo": "Preview Deploys",
+          "a": true,
+          "b": true
+        },
+        {
+          "rotulo": "Plano Gratuito",
+          "a": true,
+          "b": true
+        },
+        {
+          "rotulo": "Analytics",
+          "a": true,
+          "b": true
+        },
+        {
+          "rotulo": "Build Plugins",
+          "a": false,
+          "b": true,
+          "vence": "b"
+        },
+        {
+          "rotulo": "Forms",
+          "a": false,
+          "b": true,
+          "vence": "b"
+        }
+      ]
+    },
+    {
+      "id": "cloudflare-vs-vercel",
+      "stack_a": "cloudflare",
+      "stack_b": "vercel",
+      "linhas": [
+        {
+          "rotulo": "CDN Global",
+          "a": true,
+          "b": true
+        },
+        {
+          "rotulo": "Workers",
+          "a": true,
+          "b": "Edge Functions",
+          "vence": "a"
+        },
+        {
+          "rotulo": "R2 Storage",
+          "a": true,
+          "b": false,
+          "vence": "a"
+        },
+        {
+          "rotulo": "D1 Database",
+          "a": true,
+          "b": false,
+          "vence": "a"
+        },
+        {
+          "rotulo": "Next.js nativo",
+          "a": "Parcial",
+          "b": true,
+          "vence": "b"
+        },
+        {
+          "rotulo": "Plano Gratuito",
+          "a": true,
+          "b": true
+        },
+        {
+          "rotulo": "Self-hosted",
+          "a": false,
+          "b": false
+        }
+      ]
+    },
+    {
+      "id": "resend-vs-sendgrid",
+      "stack_a": "resend",
+      "stack_b": "sendgrid",
+      "vencedor": "a",
+      "linhas": [
+        {
+          "rotulo": "DX (Developer Experience)",
+          "a": "Excelente",
+          "b": "Bom",
+          "vence": "a"
+        },
+        {
+          "rotulo": "React Email",
+          "a": true,
+          "b": false,
+          "vence": "a"
+        },
+        {
+          "rotulo": "Plano Gratuito",
+          "a": "3k/mês",
+          "b": "100/dia",
+          "vence": "a"
+        },
+        {
+          "rotulo": "Marketing Emails",
+          "a": false,
+          "b": true,
+          "vence": "b"
+        },
+        {
+          "rotulo": "API Simples",
+          "a": true,
+          "b": true
+        },
+        {
+          "rotulo": "Templates",
+          "a": true,
+          "b": true
+        },
+        {
+          "rotulo": "Webhooks",
+          "a": true,
+          "b": true
+        }
+      ]
+    },
+    {
+      "id": "clerk-vs-auth0",
+      "stack_a": "clerk",
+      "stack_b": "auth0",
+      "vencedor": "a",
+      "linhas": [
+        {
+          "rotulo": "UI Components",
+          "a": true,
+          "b": false,
+          "vence": "a"
+        },
+        {
+          "rotulo": "DX (Developer Experience)",
+          "a": "Excelente",
+          "b": "Bom",
+          "vence": "a"
+        },
+        {
+          "rotulo": "Plano Gratuito",
+          "a": "10k MAU",
+          "b": "7k MAU",
+          "vence": "a"
+        },
+        {
+          "rotulo": "Multi-tenant",
+          "a": true,
+          "b": true
+        },
+        {
+          "rotulo": "Enterprise SSO",
+          "a": true,
+          "b": true
+        },
+        {
+          "rotulo": "Organizations",
+          "a": true,
+          "b": true
+        },
+        {
+          "rotulo": "Self-hosted",
+          "a": false,
+          "b": false
+        }
+      ]
+    }
+  ]
+}
