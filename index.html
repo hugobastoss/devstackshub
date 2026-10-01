@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' https://img.logo.dev data:; connect-src 'self'; base-uri 'self'; form-action 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DevStacksHub — Stacks e serviços para desenvolvedores</title>
+<meta name="description" content="Curadoria aberta de mais de 200 serviços de frontend, backend, banco de dados, IA, deploy e mais, com links, preços e alternativas.">
+<meta name="color-scheme" content="dark light">
+<meta name="theme-color" content="#0B0C0F">
+<link rel="canonical" href="https://hugobastoss.github.io/devstackshub/">
+<meta property="og:url" content="https://hugobastoss.github.io/devstackshub/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="DevStacksHub — Stacks e serviços para desenvolvedores">
+<meta property="og:description" content="Curadoria aberta de mais de 200 serviços de frontend, backend, banco de dados, IA, deploy e mais, com links, preços e alternativas.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@600;700&display=swap">
+<link rel="stylesheet" href="assets/styles.css">
+<script src="assets/comum.js" defer></script>
+<script src="assets/catalogo.js" defer></script>
+</head>
+<body>
+<header class="topo">
+  <div class="container topo-linha">
+    <a class="marca" href="./">
+      <svg class="marca-icone" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="8" fill="#818CF8"/><g transform="translate(5 5) scale(.9167)" fill="none" stroke="#1E1B4B" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z"/><path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12"/><path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17"/></g></svg>
+      DevStacksHub
+    </a>
+    <nav class="nav" aria-label="Principal">
+      <a href="./#catalogo" aria-current="page">Catálogo</a>
+      <a href="roadmaps.html">Roadmaps</a>
+      <a href="comparacoes.html">Comparações</a>
+      <a href="glossario.html">Glossário</a>
+      <a href="https://github.com/hugobastoss/devstackshub"><svg class="icone" aria-hidden="true"><use href="assets/icones.svg#github"/></svg>GitHub</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero-area">
+    <div class="container hero">
+      <p class="eyebrow">Curadoria aberta</p>
+      <h1>Encontre a stack certa para o seu próximo <span class="destaque">projeto.</span></h1>
+      <p class="lead">Mais de 200 serviços de frontend, backend, banco de dados, IA, deploy, e-mail, cache e muito mais, com links, preços e alternativas.</p>
+      <div class="hero-acoes">
+        <a class="botao" href="#catalogo">Explorar o catálogo</a>
+        <a class="botao botao--contorno" href="roadmaps.html">Ver roadmaps</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="secao container" aria-labelledby="titulo-categorias">
+    <div class="secao-topo">
+      <h2 id="titulo-categorias">Categorias</h2>
+      <p class="subtitulo">Escolha uma para filtrar o catálogo</p>
+    </div>
+    <div class="categorias" id="categorias"></div>
+  </section>
+
+  <section class="secao container" id="catalogo" aria-labelledby="titulo-catalogo">
+    <div class="secao-topo">
+      <h2 id="titulo-catalogo">Catálogo</h2>
+      <p class="contagem" id="contagem" aria-live="polite">Carregando…</p>
+    </div>
+
+    <div class="filtros">
+      <label class="busca">
+        <span class="sr-only">Buscar no catálogo</span>
+        <svg class="icone" aria-hidden="true"><use href="assets/icones.svg#search"/></svg>
+        <input id="busca" type="search" placeholder="Buscar por nome, empresa, tag ou recurso" autocomplete="off">
+      </label>
+      <div class="grupo" id="filtro-categoria" role="group" aria-label="Filtrar por categoria"></div>
+      <div class="filtros-linha">
+        <div class="grupo" id="filtro-tipo" role="group" aria-label="Filtrar por tipo">
+          <button type="button" data-filtro="gratuito" aria-pressed="false">Plano gratuito</button>
+          <button type="button" data-filtro="aberto" aria-pressed="false">Open source</button>
+          <button type="button" data-filtro="self" aria-pressed="false">Self-hosted</button>
+        </div>
+        <div class="acoes">
+          <label class="sr-only" for="ordem">Ordenar por</label>
+          <select class="seletor" id="ordem">
+            <option value="popularidade">Mais populares</option>
+            <option value="nome">Nome (A–Z)</option>
+            <option value="estrelas">Mais estrelas no GitHub</option>
+          </select>
+          <button type="button" class="acao" id="so-favoritos" aria-pressed="false"><svg class="icone" aria-hidden="true"><use href="assets/icones.svg#heart"/></svg>Só favoritos <span id="total-favoritos">(0)</span></button>
+        </div>
+      </div>
+    </div>
+
+    <div class="grade" id="grade"></div>
+    <p class="vazio" id="vazio" hidden><span id="vazio-texto">Nenhuma stack encontrada.</span> <button type="button" id="limpar">Limpar filtros</button></p>
+    <div class="mais" id="mais-area" hidden><button type="button" class="botao botao--contorno" id="mais">Mostrar mais</button></div>
+    <p class="nota" id="nota-estrelas" hidden></p>
+    <noscript><p class="vazio">Ative o JavaScript para ver o catálogo, ou veja as stacks em <a href="https://github.com/hugobastoss/devstackshub/blob/main/data/stacks.json">data/stacks.json</a>.</p></noscript>
+  </section>
+
+  <section class="sugerir container" id="sugerir" aria-labelledby="titulo-sugerir">
+    <div class="sugerir-caixa">
+      <div>
+        <h2 id="titulo-sugerir">Conhece uma stack que merece estar aqui?</h2>
+        <ol class="passos">
+          <li><strong>Abra uma sugestão</strong> no GitHub pelo formulário.</li>
+          <li><strong>Conte por que recomenda</strong> e em que tipo de projeto usa.</li>
+          <li><strong>A curadoria revisa</strong> e, se aprovada, a stack entra no catálogo.</li>
+        </ol>
+      </div>
+      <div class="sugerir-acoes">
+        <a class="botao" href="https://github.com/hugobastoss/devstackshub/issues/new?template=sugerir-stack.yml">Sugerir pelo formulário</a>
+        <a class="link" href="https://github.com/hugobastoss/devstackshub/blob/main/CONTRIBUTING.md">Prefere abrir um pull request?</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="container rodape">
+  <span>DevStacksHub · um projeto da <a href="https://hugobastoss.github.io/hvcb-appgames/">HVCB App&amp;Games</a></span>
+  <span>Cada ferramenta pertence aos seus criadores.</span>
+</footer>
+</body>
+</html>

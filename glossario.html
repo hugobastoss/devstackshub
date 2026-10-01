@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' https://img.logo.dev data:; connect-src 'self'; base-uri 'self'; form-action 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Glossário de termos — DevStacksHub</title>
+<meta name="description" content="Os jargões usados nas descrições das stacks, do frontend ao DevOps, explicados em linguagem simples.">
+<meta name="color-scheme" content="dark light">
+<meta name="theme-color" content="#0B0C0F">
+<link rel="canonical" href="https://hugobastoss.github.io/devstackshub/glossario.html">
+<meta property="og:url" content="https://hugobastoss.github.io/devstackshub/glossario.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Glossário de termos — DevStacksHub">
+<meta property="og:description" content="Os jargões usados nas descrições das stacks, do frontend ao DevOps, explicados em linguagem simples.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@600;700&display=swap">
+<link rel="stylesheet" href="assets/styles.css">
+<script src="assets/comum.js" defer></script>
+<script src="assets/glossario.js" defer></script>
+</head>
+<body>
+<header class="topo">
+  <div class="container topo-linha">
+    <a class="marca" href="./">
+      <svg class="marca-icone" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="8" fill="#818CF8"/><g transform="translate(5 5) scale(.9167)" fill="none" stroke="#1E1B4B" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z"/><path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12"/><path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17"/></g></svg>
+      DevStacksHub
+    </a>
+    <nav class="nav" aria-label="Principal">
+      <a href="./#catalogo">Catálogo</a>
+      <a href="roadmaps.html">Roadmaps</a>
+      <a href="comparacoes.html">Comparações</a>
+      <a href="glossario.html" aria-current="page">Glossário</a>
+      <a href="https://github.com/hugobastoss/devstackshub"><svg class="icone" aria-hidden="true"><use href="assets/icones.svg#github"/></svg>GitHub</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero-area">
+    <div class="container hero hero--pagina">
+      <p class="eyebrow"><svg class="icone" aria-hidden="true"><use href="assets/icones.svg#book-open"/></svg>Glossário</p>
+      <h1>Glossário de termos</h1>
+      <p class="lead">Os jargões usados nas descrições das stacks, do frontend ao DevOps, em linguagem simples.</p>
+    </div>
+  </section>
+
+  <section class="secao container" aria-label="Termos">
+    <div class="filtros">
+      <label class="busca">
+        <span class="sr-only">Buscar um termo</span>
+        <svg class="icone" aria-hidden="true"><use href="assets/icones.svg#search"/></svg>
+        <input id="busca" type="search" placeholder="Buscar um termo (ex.: SSR, CI/CD)" autocomplete="off">
+      </label>
+      <div class="grupo grupo--centro" id="filtro-categoria" role="group" aria-label="Filtrar por categoria"></div>
+    </div>
+    <p class="contagem" id="contagem" aria-live="polite"></p>
+    <div id="termos"></div>
+    <p class="vazio" id="vazio" hidden>Nenhum termo encontrado.</p>
+  </section>
+</main>
+
+<footer class="container rodape">
+  <span>DevStacksHub · um projeto da <a href="https://hugobastoss.github.io/hvcb-appgames/">HVCB App&amp;Games</a></span>
+  <span>Cada ferramenta pertence aos seus criadores.</span>
+</footer>
+</body>
+</html>
