@@ -1,0 +1,40 @@
+name: Atualizar estrelas
+
+on:
+  schedule:
+    - cron: '0 6 * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'data/stacks.json'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: atualizar-estrelas
+  cancel-in-progress: false
+
+jobs:
+  atualizar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: node scripts/atualizar-estrelas.mjs
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Salvar se alguma contagem mudou
+        run: |
+          if [ -z "$(git status --porcelain -- data/estrelas.json)" ]; then
+            echo "Sem mudanças nas estrelas."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/estrelas.json
+          git commit -m "chore: atualiza estrelas do GitHub"
+          git push

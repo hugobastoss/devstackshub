@@ -1,0 +1,98 @@
+name: Sugerir stack
+description: Indique um serviço ou ferramenta para o catálogo do DevStacksHub.
+title: "[Sugestão] "
+labels: ["sugestão"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Obrigado por sugerir! Antes de enviar, confira se a stack já não está no [catálogo](https://hugobastoss.github.io/devstackshub/).
+  - type: input
+    id: nome
+    attributes:
+      label: Nome
+      placeholder: "ex.: Supabase"
+    validations:
+      required: true
+  - type: input
+    id: site
+    attributes:
+      label: Site
+      description: Site oficial (https).
+      placeholder: https://exemplo.com
+    validations:
+      required: true
+  - type: dropdown
+    id: categoria
+    attributes:
+      label: Categoria
+      options:
+        - Frontend
+        - Backend
+        - Banco de dados
+        - Autenticação
+        - Armazenamento
+        - Hospedagem
+        - Deploy
+        - E-mail
+        - Filas
+        - Cache
+        - Analytics
+        - Monitoramento
+        - Pagamentos
+        - IA
+        - Testes
+        - Documentação
+        - Busca
+        - Mapas
+        - Formulários
+        - Segurança
+        - DevOps
+        - Notificações
+    validations:
+      required: true
+  - type: input
+    id: empresa
+    attributes:
+      label: Empresa
+      placeholder: "ex.: Supabase Inc."
+  - type: textarea
+    id: descricao
+    attributes:
+      label: O que faz
+      description: Uma ou duas frases.
+    validations:
+      required: true
+  - type: input
+    id: repositorio
+    attributes:
+      label: Repositório no GitHub
+      description: Se for open source, o repositório principal.
+      placeholder: https://github.com/dono/repo
+  - type: checkboxes
+    id: tipo
+    attributes:
+      label: Características
+      options:
+        - label: Tem plano gratuito
+        - label: É open source
+        - label: Pode ser self-hosted
+  - type: input
+    id: preco
+    attributes:
+      label: Preço inicial
+      placeholder: "ex.: $0, $20/mês"
+  - type: textarea
+    id: porque
+    attributes:
+      label: Por que você recomenda
+      description: Conte em que tipo de projeto você usa e o que ganhou com isso. É o que torna a recomendação útil.
+    validations:
+      required: true
+  - type: checkboxes
+    id: confirmacao
+    attributes:
+      label: Confirmação
+      options:
+        - label: Usei ou testei esta stack.
+          required: true
