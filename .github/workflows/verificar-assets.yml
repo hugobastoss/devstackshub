@@ -1,0 +1,27 @@
+name: Verificar versões dos assets
+
+on:
+  pull_request:
+    paths:
+      - '*.html'
+      - 'assets/**'
+      - 'scripts/versionar-assets.mjs'
+  push:
+    branches: [main]
+    paths:
+      - '*.html'
+      - 'assets/**'
+      - 'scripts/versionar-assets.mjs'
+
+permissions:
+  contents: read
+
+jobs:
+  verificar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: node scripts/versionar-assets.mjs --verificar

@@ -379,6 +379,11 @@ Título "Roadmaps de arquitetura" e o texto atual. Grade com os roadmaps: ícone
   https://fonts.gstatic.com; img-src 'self' https://img.logo.dev data:;
   connect-src 'self'; base-uri 'self'; form-action 'self'`.
 - Sem animações de entrada e sem skeletons.
+- **Versão dos assets:** as referências a CSS e JS nas páginas levam
+  `?v=<hash do conteúdo>` (`scripts/versionar-assets.mjs`; o CI confere com
+  `--verificar`). Sem isso, o cache de 10 minutos do GitHub Pages pode juntar
+  uma página nova com um script antigo, o que deixou o catálogo vazio depois
+  do deploy que removeu a grade de categorias.
 - `canonical` e `og:url` de cada página apontam para
   `https://hugobastoss.github.io/devstackshub/…`.
 

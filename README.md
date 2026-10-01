@@ -35,6 +35,7 @@ data/
 scripts/
   validar-dados.mjs     # valida os arquivos de data/ e as referências entre eles
   atualizar-estrelas.mjs  # busca as estrelas na API do GitHub
+  versionar-assets.mjs  # carimba ?v=<hash> nas referências de CSS e JS das páginas
 .github/
   ISSUE_TEMPLATE/       # formulário de sugestão
   workflows/            # validação em pull requests e atualização diária das estrelas
@@ -52,6 +53,17 @@ python -m http.server 8000
 ```
 
 Depois acesse http://localhost:8000.
+
+## Depois de mudar algo em assets/
+
+O GitHub Pages guarda cada arquivo em cache por 10 minutos. Para uma página
+nova nunca usar um script antigo do cache, as referências levam `?v=<hash>`:
+
+```bash
+node scripts/versionar-assets.mjs
+```
+
+O CI confere isso em cada pull request.
 
 ## Validar os dados
 
